@@ -1,0 +1,221 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+    color: white;
+}
+.finger-paint-regular {
+    font-family: "Finger Paint", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.water-brush-regular {
+    font-family: "Water Brush", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.paint {
+    font-family: "paint", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.header{
+    box-sizing: border-box;
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    padding: 16px;
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    letter-spacing: 14px;   
+    text-align: center; 
+}
+.info-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.hidden{
+    display: none;
+}
+.player-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+.players{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+.players img{
+    width: 220px;
+    height: 246px;
+}
+#player-2-logo{
+    filter: contrast(1.16);
+}
+.player-info-text{
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    font-size: 14px;  
+    letter-spacing: 2px; 
+    padding: 5px;
+}
+.player-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    font-size: 16px;
+    min-width: 200px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: rgb(37, 36, 36);
+    letter-spacing: 2px;
+}
+#start{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 8px 20px; 
+    font-size: 28px;
+    letter-spacing: 10px;
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    cursor: pointer;
+
+    height: 57px;
+}
+#start:hover{
+    font-size: 20px;
+}
+.note{
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding-top: 3px;
+}
+
+/* game zone */
+.game-zone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: rgb(23, 23, 23);
+    height: 90vh;   
+
+}
+.game-board{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+.cell{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 55px;
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    padding: 30px;
+}
+.cell:hover{
+    background-color: rgb(18, 18, 18);
+    cursor: pointer;
+}
+.player-names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+.player-name{ 
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding: 5px;
+}   
+.highlight-player{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    color: black;   
+    min-width: 80px;
+    padding: 2px;
+    font-weight: 600;
+}
+
+/* winner overlay */
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px); 
+}
+.overlay-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;     
+}
+.overlay-text{
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    font-size: 40px;
+    letter-spacing: 10px;
+    padding: 10px;
+    background-color: rgb(23, 23, 23);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+}
+#restart{
+    background-color: rgb(23, 23, 23);
+    color: white;
+    border: none;
+    padding: 8px 20px; 
+    font-size: 28px;
+    letter-spacing: 10px;
+    font-family: 'water brush', 'paint', 'Finger Paint', 'Arial';
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+#restart:hover{
+    font-size: 20px;
+}
+.overlay-hidden{
+    display: none;
+}
